@@ -2,20 +2,37 @@
 
 namespace helloworld
 {
+
     class Program
     {
+
+        enum Action
+        {
+            CREATE =0,
+            UPDATE =1,
+            DELETE =2
+
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
 
+
+            //enum
+            if(0 == Action.CREATE ){
+                Console.WriteLine("is Create");
+            }
+
             //constant
 
             const Double PI=3.1415;
-            
+
             Console.WriteLine("Ingrese Radio:");
             Int32 radio = Int32.Parse(Console.ReadLine());
             Double areaCircle= PI * radio;
             Console.WriteLine("Area {0}",areaCircle);
+
 
 
 
