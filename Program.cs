@@ -8,6 +8,18 @@ namespace helloworld
         {
             Console.WriteLine("Hello World!");
 
+            //constant
+
+            const Double PI=3.1415;
+            
+            Console.WriteLine("Ingrese Radio:");
+            Int32 radio = Int32.Parse(Console.ReadLine());
+            Double areaCircle= PI * radio;
+            Console.WriteLine("Area {0}",areaCircle);
+
+
+
+
             //for loop
             Console.WriteLine("For Loop");
             for(int y=0;y<10;y++){
