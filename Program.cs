@@ -18,6 +18,33 @@ namespace helloworld
         {
             Console.WriteLine("Hello World!");
 
+            String salida="N";
+            Employee e=null;
+            do{   
+                Console.WriteLine("Ingrese Nombre:");
+                String firstName=Console.ReadLine(); 
+                Console.WriteLine("Ingrese Apellido:");
+                String lastName=Console.ReadLine(); 
+                Console.WriteLine("Ingrese Edad:");
+                int edad=Int32.Parse(Console.ReadLine());
+                Console.WriteLine("Ingrese Tarifa:");
+                int tarifa=Int32.Parse(Console.ReadLine());
+                Console.WriteLine("Ingrese Tipo Empleado:");
+                String tipoEmpleado=Console.ReadLine(); 
+                if(tipoEmpleado.Equals("M")){
+                    e=new Manager(1,firstName,lastName,edad,tarifa);
+                    e.CalcularSalario();
+                    Console.WriteLine("Salario {0}:",e.Salary);    
+                }else{
+                    e=new Worker(1,firstName,lastName,edad,tarifa);
+                    e.CalcularSalario();
+                    Console.WriteLine("Salario {0}:",e.Salary);
+                }
+                Console.WriteLine("Desea salir S/N");
+                salida=Console.ReadLine(); 
+             }while(!salida.Equals("S"));
+
+
 
             //enum
             if(0 == Action.CREATE ){
