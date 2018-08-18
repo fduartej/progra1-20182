@@ -33,13 +33,11 @@ namespace helloworld
                 String tipoEmpleado=Console.ReadLine(); 
                 if(tipoEmpleado.Equals("M")){
                     e=new Manager(1,firstName,lastName,edad,tarifa);
-                    e.CalcularSalario();
-                    Console.WriteLine("Salario {0}:",e.Salary);    
                 }else{
                     e=new Worker(1,firstName,lastName,edad,tarifa);
-                    e.CalcularSalario();
-                    Console.WriteLine("Salario {0}:",e.Salary);
                 }
+                e.CalcularSalario();
+                Console.WriteLine("Salario {0}:",e.Salary);
                 Console.WriteLine("Desea salir S/N");
                 salida=Console.ReadLine(); 
              }while(!salida.Equals("S"));
